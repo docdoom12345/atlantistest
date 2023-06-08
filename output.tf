@@ -1,3 +1,3 @@
 output "atlantis"{
-  echo "hi"
+  echo "hi there"
 }
