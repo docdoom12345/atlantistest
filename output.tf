@@ -1,10 +1,17 @@
 terraform {
+  backend "azurerm" {
+    storage_account_name = "sai124storage"
+    container_name       = "rg-container"
+    key                  = "terraform.tfstate"
+    resource_group_name  = "rg-storage"
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "=3.59.0"
     }
   }
+  required_version = ">=1.1.0"
 }
 
 provider "azurerm" {
